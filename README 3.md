@@ -1,0 +1,2 @@
+# jlog
+joon blog..
