@@ -35,11 +35,13 @@ google_analytics: UA-69281367-1 # replace with your GA tracking identifier
 
 # Permalinks
 permalink: /:title
+#permalink: /tag/:tag
+#- tag: /tag/:tags
 # permalink: /author/:author
-# permalink: /tag/:tag
+
 
 # Authors' info in `_data/authors.yml`
-# Tags' info in `_data/tags_info.yml`
+# tags: _data/tags.yml
 
 # gems and other configs
 plugins: [jekyll-paginate, jekyll-feed]
