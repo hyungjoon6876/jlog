@@ -17,12 +17,12 @@ Java를 처음 접했을때의 느낌을 되살려보고, 기본기를 좀 더 �
 
 ## Java data type 종류
 
-	1. Primitive Data type
-	2. Reference/Object Data type
+1. Primitive Data type
+2. Reference/Object Data type
 
-	Java에는 2가지 data type 이 존재합니다. 
-	Primitive 데이터 타입과 Reference/Object 타입이 존재합니다.
-	Primitive type의 경우 메모리에 값 자체를 저장하지만 Referece/Object data type 의 경우 힙 영역에서 주소값이 참조된 형태로 Java GC에 의해 관리됩니다.
+Java에는 2가지 data type 이 존재합니다. 
+Primitive 데이터 타입과 Reference/Object 타입이 존재합니다.
+Primitive type의 경우 메모리에 값 자체를 저장하지만 Referece/Object data type 의 경우 힙 영역에서 주소값이 참조된 형태로 Java GC에 의해 관리됩니다.
 
 ## Primitive data type
 Java에는 8가지 primitive type이 존재합니다.   
