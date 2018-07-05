@@ -14,12 +14,13 @@ into the {body} of the default.hbs template -->
     <div class="inner">
         <div class="site-header-content">
             <h1 class="site-title">
-                {% if site.logo %}
-                    <!-- <img class="site-logo" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}"/> -->
+                <!-- {% if site.logo %}
+                    <img class="site-logo" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}"/>
                     Jlog
-                {% else %}
+                    {% else %} 
                     {{ site.title }}
-                {% endif %}
+                {% endif %} -->
+                {{ site.title }}
             </h1>
             <h2 class="site-description">{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}</h2>
         </div>
