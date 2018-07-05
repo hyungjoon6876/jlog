@@ -97,7 +97,7 @@ class Baby{
 Baby b = new Baby();
 ```
 
-여기서 Baby class 는 'clas type'의 Reference data type 입니다.
+여기서 Baby class 는 `clas type`의 Reference data type 입니다.
 
 ```java
 interface BabyHandler{
@@ -105,7 +105,7 @@ interface BabyHandler{
 }
 ```
 
-BabyHandler interface 는 'interface type'의 Reference data type 입니다.
+BabyHandler interface 는 `interface type`의 Reference data type 입니다.
 
 ## 정리
 간단히 Java data type에 대해서 다시 정리해 보았습니다.  
