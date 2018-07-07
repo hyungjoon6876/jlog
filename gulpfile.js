@@ -1,70 +1,63 @@
-var gulp = require('gulp');
+// Use npm install to install all the dependencies located in package.json
+const gulp = require('gulp');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const imagemin = require('gulp-imagemin');
+const gutil = require('gulp-util');
+const shell = require('gulp-shell');
+const less = require('gulp-less');
+const cssmin = require('gulp-cssmin')
+const replace = require('gulp-replace');
 
-// gulp plugins and utils
-var gutil = require('gulp-util');
-var livereload = require('gulp-livereload');
-var nodemon = require('gulp-nodemon');
-var postcss = require('gulp-postcss');
-var sourcemaps = require('gulp-sourcemaps');
-var zip = require('gulp-zip');
-
-// postcss plugins
-var autoprefixer = require('autoprefixer');
-var colorFunction = require('postcss-color-function');
-var cssnano = require('cssnano');
-var customProperties = require('postcss-custom-properties');
-var easyimport = require('postcss-easy-import');
-
-var swallowError = function swallowError(error) {
-    gutil.log(error.toString());
-    gutil.beep();
-    this.emit('end');
-};
-
-var nodemonServerInit = function () {
-    livereload.listen(1234);
-};
-
-gulp.task('build', ['css'], function (/* cb */) {
-    return nodemonServerInit();
+gulp.task('js', function () {
+    gutil.log('... Minifying js');
+    gulp.src(['assets/js/partials/**.js'])
+        .pipe(concat('main.min.js'))
+        .pipe(uglify())
+        .on('error', (err) => {
+            gutil.log(gutil.colors.red('[Error]'), err.toString());
+        })
+        .pipe(gulp.dest("assets/js/"))
 });
 
-gulp.task('css', function () {
-    var processors = [
-        easyimport,
-        customProperties,
-        colorFunction(),
-        autoprefixer({browsers: ['last 2 versions']}),
-        cssnano()
-    ];
-
-    return gulp.src('assets/css/*.css')
-        .on('error', swallowError)
-        .pipe(sourcemaps.init())
-        .pipe(postcss(processors))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('assets/built/'))
-        .pipe(livereload());
+gulp.task("img", function () {
+    gutil.log('... Minifying images');
+    gulp.src('assets/img/**/*.{png,svg,jpg,gif}')
+        .pipe(imagemin())
+        .on('error', (err) => {
+            gutil.log(gutil.colors.red('[Error]'), err.toString());
+        })
+        .pipe(gulp.dest('assets/img/'))
 });
 
-gulp.task('watch', function () {
-    gulp.watch('assets/css/**', ['css']);
+gulp.task('minify-bootstrap-css', function () {
+    gutil.log('... Minifying isolated bootstrap');
+    gulp.src('assets/css/vendor/bootstrap-iso.css')
+        .pipe(cssmin())
+        .on('error', (err) => {
+            gutil.log(gutil.colors.red('[Error]'), err.toString());
+        })
+        .pipe(concat('bootstrap-iso.min.css'))
+        .pipe(gulp.dest('assets/css/vendor/'));
+})
+
+gulp.task("isolate-bootstrap-css", ['minify-bootstrap-css'], function () {
+    gutil.log('... Generating isolated bootstrap');
+    gulp.src('assets/css/bootstrap-iso.less')
+        .pipe(less())
+        .pipe(replace('.bootstrap-iso html', ''))
+        .pipe(replace('.bootstrap-iso body', ''))
+        .pipe(gulp.dest('assets/css/vendor/'));
 });
 
-gulp.task('zip', ['css'], function() {
-    var targetDir = 'dist/';
-    var themeName = require('./package.json').name;
-    var filename = themeName + '.zip';
-
-    return gulp.src([
-        '**',
-        '!node_modules', '!node_modules/**',
-        '!dist', '!dist/**'
+gulp.task("serve", function () {
+    gutil.log('... Launching Web browser');
+    gutil.log('... Starting Jelyll');
+    shell.task([
+        "python -m webbrowser 'http://localhost:4000/Type-on-Strap/' && bundle exec jekyll serve --watch"
     ])
-        .pipe(zip(filename))
-        .pipe(gulp.dest(targetDir));
 });
 
-gulp.task('default', ['build'], function () {
-    gulp.start('watch');
+gulp.task('default', ['js', 'img'], function () {
+    return gutil.log('... Gulp is running!');
 });

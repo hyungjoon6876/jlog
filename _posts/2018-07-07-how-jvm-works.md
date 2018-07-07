@@ -1,14 +1,7 @@
 ---
 layout: post
-current: post
-cover: assets/images/20180705/garbage-collection.png
-navigation: True
 title: 'JVM GC 에 대한 이해'
-date: 2018-07-07
-tags: Java
-class: post-template
-subclass: 'post'
-author: hj
+tags: [Java]
 ---
 # JVM 구조 동작원리 그리고 GC
 Java 프로그램은 JVM 위에서 동작하고 관리됩니다.
@@ -21,7 +14,7 @@ Java Compiler 가 `java`파일을 `class` java byte code로 컴파일을 하는�
 
 ### JVM 구조
 
-![jvm struct](/jlog/assets/images/20180705/architecture-of-jvm.jpg)  
+![jvm struct]({{ site.baseurl }}/assets/img/20180707/architecture-of-jvm.jpg)  
 
  * Class Loader
  * Runtime Data Areas
@@ -80,7 +73,7 @@ Class Loader가 읽어드린 `class` byte code 가 저장되는 영역입니다.
 > `Java8`에서는 Permenant Generation 이 없어지고 `metaspace`영역이 새로 생겼습니다.  
 > `metaspace`은 Heap 영역의 일부는 아닙니다.
 
-![Java8 jvm heap](/jlog/assets/images/20180707/Java8-heap.jpg)
+![Java8 jvm heap]({{ site.baseurl }}/assets/img/20180707/Java8-heap.jpg)
 
 새로운 객체가 생성될 떄마다 그 객채에 대한 주소값이 저장됩니다.
 모든 Thread에서 참조와 접근이 가능합니다.

@@ -1,14 +1,7 @@
 ---
 layout: post
-current: post
-cover: assets/images/jekyll_github.jpg
-navigation: True
 title: 'github pages jekyll posting 하기'
-date: 2018-07-04
-tags: jekyll
-class: post-template
-subclass: 'post'
-author: hj
+tags: [jekyll]
 ---
 
 Markdown은 텍스트기반의 마크업 언어로 쉽게 쓸수있고, HTML로 변환이 가능하다는 특징이 있습니다.  

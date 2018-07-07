@@ -1,14 +1,7 @@
 ---
 layout: post
-current: post
-cover: assets/images/20180705/Java-logo-png.png
-navigation: True
 title: 'Java data type 정리'
-date: 2018-07-05
-tags: Java
-class: post-template
-subclass: 'post'
-author: hj
+tags: [Java]
 ---
 
 # Java data type
@@ -116,7 +109,7 @@ JVM 영역에 대한 이해와, GC 메카니즘 정리가 필요해 보입니다
 
 ### 출처
 * [https://stackoverflow.com/questions/2721546/why-dont-java-generics-support-primitive-types](https://stackoverflow.com/questions/2721546/why-dont-java-generics-support-primitive-types)
-*   [https://www.tutorialspoint.com/java/java_basic_datatypes.htm](https://www.tutorialspoint.com/java/java_basic_datatypes.htm)
+* [https://www.tutorialspoint.com/java/java_basic_datatypes.htm](https://www.tutorialspoint.com/java/java_basic_datatypes.htm)
 * [http://hipercube.tistory.com/entry/JAVA-Primitive-type-Reference-type](http://hipercube.tistory.com/entry/JAVA-Primitive-type-Reference-type)
 
 	
