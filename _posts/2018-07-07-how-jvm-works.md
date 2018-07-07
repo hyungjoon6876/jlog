@@ -131,7 +131,7 @@ GC 메카니즘에서 메모리에대한 회수는 메모리 참조 뿐 아니�
 GC는 알아갈수록 어려운것 같습니다. 다양한 GC 방식에 대하여 좀더 공부하고 포스팅할 예정입니다.
 
 ---
- ### 출처
+### 출처
  * [https://d2.naver.com/helloworld/37111](https://d2.naver.com/helloworld/37111)
  * [https://dzone.com/articles/java-8-permgen-metaspace](https://dzone.com/articles/java-8-permgen-metaspace)
  * [http://karunsubramanian.com/wp-content/uploads/2014/07/Java8-heap.jpg](http://karunsubramanian.com/wp-content/uploads/2014/07/Java8-heap.jpg)
