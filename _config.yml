@@ -35,7 +35,7 @@ google_analytics: UA-69281367-1 # replace with your GA tracking identifier
 
 # Permalinks
 permalink: /:title
-#permalink: /tag/:tag
+#permalink: /tag
 #- tag: /tag/:tags
 # permalink: /author/:author
 
@@ -73,6 +73,7 @@ username: hyungjoon6876
 repo: hyungjoon6876.github.io
 branch: master
 relative_source: ../jlog
+relative_permalinks: False
 destination: ../jlog-pages/
 production_url:  https://hyungjoon6876.github.io/
 source_url:  https://github.com/hyungjoon6876/jlog/

@@ -119,6 +119,8 @@
         {% include post-scripts.html %}
     {% elsif page.class == "page-template" %}
         {% include page-scripts.html %}
+    {% elsif page.class == "tag-template" %}
+        {% include tag_pagination.html %}
     {% endif %}
 
     <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->

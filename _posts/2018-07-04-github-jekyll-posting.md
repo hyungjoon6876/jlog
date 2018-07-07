@@ -5,7 +5,7 @@ cover: assets/images/jekyll_github.jpg
 navigation: True
 title: 'github pages jekyll posting 하기'
 date: 2018-07-04
-tags: [jekyll, github]
+tags: jekyll
 class: post-template
 subclass: 'post'
 author: hj
