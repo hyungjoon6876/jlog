@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'RDB index 제대로 이해하고 제대로 사용하기'
+title: 'RDB index 정리'
 tags: [rdb]
 ---
 
