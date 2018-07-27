@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 'Spring reactor?'
+title: 'project reactor 정ㄹ'
 tags: [Java, Spring framework, reactive programming, reactor]
 ---
-Reactor 란? 리엑티브 프로그래밍 패러다임을 구현한 스프링 프로젝트입니다.
+project Reactor? 리엑티브 프로그래밍 패러다임을 구현한 스프링 프로젝트입니다.
 기본적으로 OOP 에서의 `Observer` 디자인 패턴에서 발전한 것입니다
 
 * Publisher
