@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'project reactor 정ㄹ'
+title: 'project reactor 정리'
 tags: [Java, Spring framework, reactive programming, reactor]
 ---
 project Reactor? 리엑티브 프로그래밍 패러다임을 구현한 스프링 프로젝트입니다.
