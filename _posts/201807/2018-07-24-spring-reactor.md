@@ -90,7 +90,8 @@ Mono.just("mono");
 Mono.error(new Exception());
 ```
 
-## map, flatMap
+
+
 `map`, `flatMap` 연산자는 element 를 변환시킵니다.
 표현에서의 차이는  
 * Flux<U> map(Function<T, U>)
