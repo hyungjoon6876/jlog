@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'graph 탐색  [DFS, BFS]'
-tags: [ata structure, algorithm]
+tags: [data structure, algorithm]
 ---
 DFS, BFS 는 graph 자료구조에서 탐색 알고리즘으로 깊이 우선 탐색(Depth First Search) , 너비 우선 탐색(Breadth First Search)의 약자입니다.
 
